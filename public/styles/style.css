@@ -1,0 +1,140 @@
+:root {
+    --midnight: #191970; /* midnight blue */
+    --ivory: #FFFFF0;    /* ivory */
+    --ivory-70: rgba(255, 255, 240, 0.7);
+    --ivory-40: rgba(255, 255, 240, 0.4);
+}
+
+html, body {
+    height: 100%;
+    background: var(--ivory);
+    color: var(--ivory);
+}
+
+body {
+    /* Feed Bootstrap's CSS variables for consistent theming */
+    --bs-body-bg: var(--midnight);
+    --bs-body-color: var(--ivory);
+    --bs-border-color: var(--ivory-40);
+
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-bottom: 72px; /* space for fixed action bar */
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+}
+
+.banner {
+    background: var(--midnight);
+    color: var(--ivory);
+    font-weight: 700;
+    font-size: 1.75rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--ivory-40);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: 100vw;
+}
+
+.form-section {
+    border: 1px solid var(--ivory-40);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background: var(--midnight);
+}
+
+.form-section h2 {
+    margin: 0 0 1rem 0;
+    color: var(--ivory);
+}
+
+/* Generated cards */
+#cards-container {
+  display: grid;
+  gap: 12px;
+}
+
+#cards-container > section {
+    background: var(--midnight);
+    color: var(--ivory);
+    border: 1px solid var(--ivory-40) !important;
+    border-radius: 0.5rem;
+}
+
+/* Labels and titles */
+.form-label,
+label,
+.card-title {
+    color: var(--ivory);
+}
+
+/* Inputs and textareas */
+.form-control,
+input[type="text"],
+textarea {
+    background: var(--midnight) !important;
+    color: var(--ivory) !important;
+    border: 1px solid var(--ivory-40) !important;
+    caret-color: var(--ivory);
+}
+
+.form-control::placeholder,
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: var(--ivory-70);
+}
+
+.form-control:focus,
+input[type="text"]:focus,
+textarea:focus {
+    background: var(--midnight) !important;
+    color: var(--ivory) !important;
+    border-color: var(--ivory) !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 240, 0.15) !important;
+    outline: none;
+}
+
+/* Add button */
+#add-flashcard {
+    background: transparent;
+    color: var(--ivory);
+    border: 1px solid var(--ivory);
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+}
+
+#add-flashcard:hover {
+    background: var(--ivory);
+    color: var(--midnight);
+}
+
+#add-flashcard:active {
+    transform: translateY(1px);
+}
+
+/* Utility tweaks */
+hr,
+.border {
+    border-color: var(--ivory-40) !important;
+}
+
+/* Fixed action bar */
+.actions-fixed {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  background: var(--midnight);
+  border-top: 1px solid var(--ivory-40);
+  padding: 0.75rem 1rem;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
